@@ -53,7 +53,7 @@ submitBtn.addEventListener("click", function(e)
         arr.push(temp);
         
         entrytable.innerHTML = ``;
-        entrytable.innerHTML = `<tr><th>Player</th><th>Score</th></tr>`;
+        entrytable.innerHTML = `<tr><th>Team</th><th>Score</th></tr>`;
         for (i=0; i<arr.length; i++)
         {
             entrytable.innerHTML +=`<tr><td>${arr[i].name}</td>
@@ -131,11 +131,13 @@ if (sortedtable.style.display = "none")
     sortedtable.style.display = "table";
 }
 entrytable.style.display = "none";
-arr.sort((a,b) => (a.Score > b.Score) ? 1 : ((b.Score > a.Score) ? -1 : 0));
+arr.sort(function(a, b){
+    return b.Score - a.Score
+});
 
 console.log(arr);
 sortedtable.innerHTML = ``;
-sortedtable.innerHTML = `<tr><th>Player</th><th>Score</th></tr>`;
+sortedtable.innerHTML = `<tr><th>Team</th><th>Score</th></tr>`;
 for (i=0; i<arr.length; i++)
 {
     sortedtable.innerHTML +=`<tr><td>${arr[i].name}</td>
