@@ -96,7 +96,7 @@ label{
     display: inline;
 }
 
-.hide-btn{
+.hide-btn, .design-btn{
     width: 7.4em;
     height: 1.83em;
     margin-left: 0.1em;
@@ -112,11 +112,11 @@ label{
     overflow: hidden;
    }
    
-   .hide-btn:hover {
+   .hide-btn:hover,.design-btn:hover {
     color: black;
    }
    
-   .hide-btn:after {
+   .hide-btn:after, .design-btn:after {
     content: "";
     background: white;
     position: absolute;
@@ -129,13 +129,13 @@ label{
     transition: all 0.5s;
    }
    
-   .hide-btn:hover:after {
+   .hide-btn:hover:after, .design-btn:hover:after {
     transform: skewX(-45deg) scale(1, 1);
     -webkit-transition: all 0.5s;
     transition: all 0.5s;
    }
 
-   .design-btn {
+   /* .design-btn {
     background: #FBCA1F;
     font-family: inherit;
     padding: 0.1em 0.2em;
@@ -160,7 +160,7 @@ label{
        background-color: rgb(236, 45, 45);
        color: white;
        margin-right: 0.1em;
-   }
+   } */
 
 td:nth-child(odd) {
 color: rgb(237, 9, 9);
@@ -207,13 +207,14 @@ color: green;
      } 
      
   }
-   
- @media (max-width: 480px)
+
+  @media (max-width: 480px)
   {
     .logo{
         display: none;
     }
-       h4{
+    h4{
         margin-top: 2em;
     }
   }
+   
