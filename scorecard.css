@@ -47,6 +47,7 @@ table, tr, td, th{
     border-collapse: collapse;
     border-spacing: 0;
     padding: 5px;
+    background-color: #f2f2f2;
 }
 th{
     background-color: black;
@@ -64,12 +65,7 @@ h4{
     filter: drop-shadow(5px 5px 5px black);
 
 }
-tr:nth-child(even){
-    background: grey;
-}
-tr:nth-child(odd){
-    background: #fff;
-}
+
 td{
     margin-left: 400px;
 }
@@ -102,7 +98,7 @@ label{
 
 .hide-btn{
     width: 7.4em;
-    height: 1.99em;
+    height: 1.83em;
     margin-left: 0.1em;
     background: black;
     color: white;
@@ -142,10 +138,10 @@ label{
    .design-btn {
     background: #FBCA1F;
     font-family: inherit;
-    padding: 0.1em 0.8em;
+    padding: 0.1em 0.2em;
     font-weight: 900;
     font-size: 18px;
-    border: 2px solid black;
+    border: 1px solid black;
     border-radius: 0.3em;
     box-shadow: 0.08em 0.08em;
    }
@@ -166,7 +162,13 @@ label{
        margin-right: 0.1em;
    }
 
-  @media only screen and (max-width: 600px) {
+td:nth-child(odd) {
+color: rgb(237, 9, 9);
+}
+td:nth-child(even) {
+color: green;
+}
+@media only screen and (max-width: 600px) {
       form {
           padding: 0.5em;
       }
@@ -202,7 +204,7 @@ label{
         display: flex;
         justify-content: space-evenly;
         align-items: center;
-     }
+     } 
      
   }
    
