@@ -1,0 +1,208 @@
+body{
+    background: linear-gradient(90deg, #41b9b9, #d35cb5);
+    /* background-color: rgb(255, 160, 105); */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.logo{
+    position: relative;
+    top: 0.75em;
+    left: 2vw;
+    border-radius: 50%;
+    border: 2px solid black;
+    animation: pulse 1s infinite;
+}
+@keyframes pulse {
+    from{
+        box-shadow: 0 0 0 0 rgba(251, 10, 179, 0.739);
+    }
+    to{
+        box-shadow: 0 0 0 15px rgba(251, 10, 179, 0);
+    }
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: -3rem;
+}
+table{
+    width: 50%;
+    height: 50%;
+    border: 3px solid black;
+    margin-top: -1rem;
+    background: #fff;
+    text-align: center;
+    font-size: 18px;
+    font-family: 'Rowdies', cursive;
+    color: #000;
+    text-transform: uppercase;
+    /* margin-top: -4rem; */
+}
+table, tr, td, th{
+    border: 1px solid black;
+    border-collapse: collapse;
+    border-spacing: 0;
+    padding: 5px;
+}
+th{
+    background-color: black;
+    font-family: 'Roboto', sans-serif;
+    color : white;
+    letter-spacing: 1px;
+}
+h4{
+    margin-top: -0.8rem;
+    font-family: 'Shrikhand', cursive;
+    font-size: 23px;
+    color: gold;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    filter: drop-shadow(5px 5px 5px black);
+
+}
+tr:nth-child(even){
+    background: grey;
+}
+tr:nth-child(odd){
+    background: #fff;
+}
+td{
+    margin-left: 400px;
+}
+.add-btn {
+color: green;
+}
+.minus-btn {
+color: blue;
+}
+.delete-btn {
+color: red;
+}
+
+input{
+   height: 1.8em;
+   border: 2px solid black;
+   border-radius: 0.3em;
+}
+
+label{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+}
+.team-name, .team-score, br{
+    display: none;
+}
+.btn-group{
+    display: inline;
+}
+
+.hide-btn{
+    width: 7.4em;
+    height: 1.99em;
+    margin-left: 0.1em;
+    background: black;
+    color: white;
+    border: none;
+    border-radius: 0.3em;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+   }
+   
+   .hide-btn:hover {
+    color: black;
+   }
+   
+   .hide-btn:after {
+    content: "";
+    background: white;
+    position: absolute;
+    z-index: -1;
+    left: -20%;
+    right: -20%;
+    top: 0;
+    bottom: 0;
+    transform: skewX(-45deg) scale(0, 1);
+    transition: all 0.5s;
+   }
+   
+   .hide-btn:hover:after {
+    transform: skewX(-45deg) scale(1, 1);
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+   }
+
+   .design-btn {
+    background: #FBCA1F;
+    font-family: inherit;
+    padding: 0.1em 0.8em;
+    font-weight: 900;
+    font-size: 18px;
+    border: 2px solid black;
+    border-radius: 0.3em;
+    box-shadow: 0.08em 0.08em;
+   }
+   
+   .design-btn:hover {
+    transform: translate(-0.05em, -0.05em);
+    box-shadow: 0.15em 0.15em;
+    cursor: pointer;
+   }
+   
+   .design-btn:active {
+    transform: translate(0.05em, 0.05em);
+    box-shadow: 0.05em 0.05em;
+   } 
+   .submit{
+       background-color: rgb(236, 45, 45);
+       color: white;
+       margin-right: 0.1em;
+   }
+
+  @media only screen and (max-width: 600px) {
+      form {
+          padding: 0.5em;
+      }
+     input{
+         height: 1.5em;
+         width: 15em;
+         margin-left: 0.5em;
+     }
+     .team-name, .team-score, br{
+        display: inline-block;
+     }
+     .playerName{
+         margin: 0.2em 0em 0em -0.1em;
+     }
+     .score-label{
+         margin: 0em -0.20rem 0em 0.1em;
+     }
+     .playerScore{
+         margin: 0.2em;
+     }
+     .design-btn{
+        padding: 0.01em 0.2em;
+        font-weight: bold;
+     }
+     .hide-btn{
+        width: 7.4em;
+        height: 1.59em;
+        padding: 0.1em;
+        border-radius: 0.2em;
+     }
+     .btn-group{
+        margin: 0.3em 0.5em 0em 0em;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+     }
+     
+  }
+   

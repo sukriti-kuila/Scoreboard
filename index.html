@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Score Card </title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Acme&family=BioRhyme&family=Carter+One&family=Paytone+One&family=Rowdies:wght@300&family=Shippori+Antique&display=swap');
+    </style>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+    </style>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Rowdies:wght@300&display=swap');
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="scorecard.css">
+</head>
+
+<body>
+    <form>
+        <label>Quiz Name</label>
+        <input type="text" name="quizname" placeholder="Enter Quiz Name" class="quiz-name">
+        <br>
+        <label> Team <span class="team-name">Name</span></label>
+        <input type="text" class="playerName" placeholder="Enter Team Name...">
+        <br>
+        <label class="score-label"> <span class="team-score">Team</span> Score</label>
+        <input type="number" class="playerScore" placeholder="Enter Score...">
+        <br>
+        <div class="btn-group">
+            <button type="submit" class="submit design-btn"> SUBMIT </button>
+            <button type="submit" id="sort" class="design-btn"> SORT TABLE</button>
+            <button class="hide-btn">HIDE | SHOW</button>
+        </div>
+    </form>
+    <hr>
+
+    <img src="logo.jpg" alt="logo" class="logo" height="70px">
+
+    <section>
+        <h4><span id="title">Quiz</span> Scorecard</h4>
+        <table id="entryTable">
+        </table>
+        <table id="sortedTable">
+        </table>
+    </section>
+</body>
+<script src="app.js"></script>
+
+</html>
